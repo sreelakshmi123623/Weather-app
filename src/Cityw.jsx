@@ -21,15 +21,15 @@ function Cityw() {
     alert("city Not Found")
     setWeather(null)
   }
-  console.log(data);
+
   
-//   else{
-//     setWeather(data)
-//     setError("")
-//   }
+  else{
+    setWeather(data)
+    setError("")
+  }
  })
-//  .catch(()=>setError("Something Went Wrong"))
-// return
+ .catch(()=>setError("Something Went Wrong"))
+ return
  }
 
   return (
@@ -57,7 +57,7 @@ function Cityw() {
        
         </>
          )}
-                 </div>
+        </div>
 
       </div>
     </div>
