@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-
+import weatherImg from "./assets/weather.png"
+import thermometerImg from "./assets/thermometer.png"
 function Cityw() {
 
   const[city,setCity]=useState("")
@@ -39,18 +40,17 @@ function Cityw() {
         <div>
           <input type="text" placeholder=' Enter city name' value={city} onChange={(e)=>setCity(e.target.value)} onKeyDown={(e)=>e.key==="Enter" && getWeather()} className='w-90px mt-10 ml-20 sm:ml-25 p-1 bg-white rounded-md border-1' />
           <button variant="contained" onClick={getWeather} className=' text-white rounded-md p-1 ml-3  hover:bg-white hover:text-black border-1'>Search</button>
-          <img className='w-50 h-50 ml-35' src="https://attic.sh/q7tw7mp0sf5cdtrvog8e9ochmjpg" alt="" />
+          <img className='w-50 h-50 ml-35' src={weatherImg} alt="" />
          {weather && (
           <>
           <div className='text-center text-2xl text-white'>{weather.name}</div>
         <div className='flex justify-evenly mt-15'>
           <div className='w-40 h-30 rounded-md border-1 border-white'>
-            <img className='h-10 w-10 ml-15 mt-2' src="https://png.pngtree.com/png-vector/20220719/ourmid/pngtree-color-icon---thermometer-color-raining-cold-vector-png-image_37892164.png" alt="" />
+            <img className='h-10 w-10 ml-15 mt-2' src={thermometerImg} alt="" />
            <h4 className='text-center mt-2 text-white text-xs'> Humidity</h4>
            <p className='text-center text-white text-2xl mt-3'>{weather.main.humidity}%</p>
            </div>
           <div className='w-40 h-30 rounded-md border-1  border-white'>
-            <img src="" alt="" />
             <h4 className='text-center mt-2 text-white text-xs mt-3'>Wind speed</h4>
             <p className='text-center text-white text-2xl mt-5'>{weather.wind.speed} m/s</p></div>
         </div>
