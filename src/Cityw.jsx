@@ -37,8 +37,8 @@ function Cityw() {
       <div className='h-150 w-120 rounded-lg bg-blue-900 border-1 border-white'>
         <h2 className='text-center text-2xl text-white pt-3'>Weather Check</h2>
         <div>
-          <input type="text" placeholder=' Enter city name' value={city} onChange={(e)=>setCity(e.target.value)} onKeyDown={(e)=>e.key==="Enter" && getWeather()} className='w-90px mt-10 ml-25 p-1 bg-white rounded-md border-1' />
-          <button variant="contained" onClick={getWeather} className=' text-white rounded-md p-1 ml-3 hover:bg-white hover:text-black border-1'>Search</button>
+          <input type="text" placeholder=' Enter city name' value={city} onChange={(e)=>setCity(e.target.value)} onKeyDown={(e)=>e.key==="Enter" && getWeather()} className='w-90px mt-10 ml-20 sm:ml-25 p-1 bg-white rounded-md border-1' />
+          <button variant="contained" onClick={getWeather} className=' text-white rounded-md p-1 ml-3  hover:bg-white hover:text-black border-1'>Search</button>
           <img className='w-50 h-50 ml-35' src="https://attic.sh/q7tw7mp0sf5cdtrvog8e9ochmjpg" alt="" />
          {weather && (
           <>
